@@ -6,7 +6,7 @@ axios.defaults.baseURL = "https://api.unsplash.com";
 
 export const requestImages = async (query = "", page = 1) => {
   const response = await axios.get(
-    `/search/photos/?client_id=s6sOTg-4HffngxAlfYllI_pIwY2-Him-pHFKzypl6TA&query=${query}&page=${page}&per_page=8`
+    `/search/photos/?client_id=s6sOTg-4HffngxAlfYllI_pIwY2-Him-pHFKzypl6TA&query=${query}&page=${page}&per_page=16`
   );
   return response.data;
 };
