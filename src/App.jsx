@@ -22,8 +22,6 @@ function App() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [modalImage, setModalImage] = useState(null);
 
-  console.log(images);
-
   const onSubmit = (inputValue) => {
     setImages([]);
     setPage(1);
@@ -43,7 +41,6 @@ function App() {
       try {
         setLoading(true);
         const data = await requestImages(searchQuery, page);
-        console.log(data);
 
         if (!data.results.length) {
           toast(

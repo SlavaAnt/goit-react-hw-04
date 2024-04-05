@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import ImageCard from "../ImageCard/ImageCard";
 import css from "./ImageGallery.module.css";
 
@@ -22,3 +23,10 @@ const ImageGallery = ({ images, onImageClick }) => {
 };
 
 export default ImageGallery;
+
+ImageGallery.propTypes = {
+  images: PropTypes.arrayOf(
+    PropTypes.shape({ id: PropTypes.string.isRequired })
+  ),
+  onImageClick: PropTypes.func.isRequired,
+};

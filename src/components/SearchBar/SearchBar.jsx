@@ -1,5 +1,6 @@
 import { FcSearch } from "react-icons/fc";
 import toast, { Toaster } from "react-hot-toast";
+import PropTypes from "prop-types";
 import css from "./SearchBar.module.css";
 
 const SearchBar = ({ onSubmit }) => {
@@ -42,3 +43,5 @@ const SearchBar = ({ onSubmit }) => {
 };
 
 export default SearchBar;
+
+SearchBar.propTypes = { onSubmit: PropTypes.func.isRequired };

@@ -1,8 +1,9 @@
+import PropTypes from "prop-types";
 import css from "./ImageCard.module.css";
 
 const ImageCard = ({ image }) => {
   const {
-    description,
+    description = "No data",
     urls: { small },
   } = image;
 
@@ -14,3 +15,12 @@ const ImageCard = ({ image }) => {
 };
 
 export default ImageCard;
+
+ImageCard.propTypes = {
+  image: PropTypes.shape({
+    description: PropTypes.string,
+    urls: PropTypes.shape({
+      small: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+};
