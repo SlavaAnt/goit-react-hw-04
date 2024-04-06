@@ -11,6 +11,7 @@ const SearchBar = ({ onSubmit }) => {
     if (!inputValue) {
       toast("You need to enter text to search for images!"),
         { position: "top-center" };
+      return;
     }
 
     onSubmit(inputValue);

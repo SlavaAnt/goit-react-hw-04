@@ -8,12 +8,8 @@ const ImageGallery = ({ images, onImageClick }) => {
       <ul className={css.imageContainer}>
         {images.map((image) => {
           return (
-            <li
-              className={css.imageCard}
-              key={image.id}
-              onClick={() => onImageClick(image)}
-            >
-              <ImageCard image={image} />
+            <li className={css.imageCard} key={image.id}>
+              <ImageCard image={image} onImageClick={onImageClick} />
             </li>
           );
         })}
